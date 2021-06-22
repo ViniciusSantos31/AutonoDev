@@ -1,12 +1,12 @@
 import { createStore, applyMiddleware, Store } from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-import { UserState } from './ducks/user/types';
 
 import rootReducer from './ducks/rootReducer';
+import { addState } from './ducks/book/types';
 
 export interface ApplicationState {
-  user: UserState
+  book: addState
 }
 let middleware: any = [];
 

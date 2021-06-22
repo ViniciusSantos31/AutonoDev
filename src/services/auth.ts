@@ -1,31 +1,33 @@
-import { environment } from '../environment/environment';
+import React from 'react';
 
-const {
-  REACT_APP_LOCAL_STORAGE_USER,
-} = environment;
+// import { environment } from '../environment/environment';
 
-const userAuth = {
-  token: localStorage.getItem(REACT_APP_LOCAL_STORAGE_USER)
-  || '',
-};
+// const {
+//   REACT_APP_LOCAL_STORAGE_USER,
+// } = environment;
 
-export const isAuthenticated = () => {
-    userAuth.token = String(
-      JSON.parse(userAuth.token),
-    );
-    if (userAuth.token !== '') {
-      return true;
-    }
-    return false;
-};
+// const userAuth = {
+//   token: localStorage.getItem(REACT_APP_LOCAL_STORAGE_USER)
+//   || '',
+// };
+
+// export const isAuthenticated = () => {
+//     userAuth.token = String(
+//       JSON.parse(userAuth.token),
+//     );
+//     if (userAuth.token !== '') {
+//       return true;
+//     }
+//     return false;
+// };
 
 
-export const getToken = () => {
-    userAuth.token = String(
-      JSON.parse(userAuth.token),
-    );
-    if (userAuth.token !== '') {
-      return userAuth.token;
-    }
-    return '';
-};
+// export const getToken = () => {
+//     userAuth.token = String(
+//       JSON.parse(userAuth.token),
+//     );
+//     if (userAuth.token !== '') {
+//       return userAuth.token;
+//     }
+//     return '';
+// };
