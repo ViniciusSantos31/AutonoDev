@@ -1,12 +1,13 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import ExampleExample from '../../containers/ExampleExample';
+import InputText from '../../components/Input';
+import HomePage from '../../containers/pages/HomePage';
 
 export default function Routes() {
   return (
     <Switch>
-      <Route exact path="/" component={ExampleExample} />
-      <Redirect from="*" to="/" />
+      <Route path="/buscaLivro" component={HomePage} />
+      <Redirect from="*" to="/buscaLivro" />
     </Switch>
   );
 }
